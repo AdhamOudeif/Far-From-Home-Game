@@ -56,6 +56,8 @@
     <Compile Include="Assets\GameFiles\Scripts\Player.cs" />
     <Compile Include="Assets\GameFiles\Scripts\Level.cs" />
     <Compile Include="Assets\GameFiles\Scripts\Camera.cs" />
+    <Compile Include="Assets\GameFiles\Scripts\KillPlayer.cs" />
+    <Compile Include="Assets\GameFiles\Scripts\DisappearTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imported 2D kits\BayatGames\Free Platform Game Assets\Readme.txt" />
