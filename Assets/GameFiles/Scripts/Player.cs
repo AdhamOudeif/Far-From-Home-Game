@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask WhatIsGround;
 
     private Rigidbody2D rb;
-    private BoxCollider2D coll;
-    private float DirectionX = 0f;
 
     void Start()
     {
