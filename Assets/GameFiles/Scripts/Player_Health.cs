@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player_Health : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class Player_Health : MonoBehaviour
     void Update()
     {
         healthText.text = playerHealth.ToString();
+        if(playerHealth <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
    
 }

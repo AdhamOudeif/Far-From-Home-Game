@@ -20,6 +20,8 @@ public class LavaKill : MonoBehaviour
     {
         if (other.CompareTag("Player")) {
 
+            Player_Health.playerHealth -= 1;
+
             SceneManager.LoadScene(Respawn);
         }
     }
