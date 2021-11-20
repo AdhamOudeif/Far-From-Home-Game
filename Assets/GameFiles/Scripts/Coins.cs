@@ -10,9 +10,11 @@ public class Coins : MonoBehaviour
         //If player collieds with coin
         if(collision.gameObject.tag =="Player")
         {
+            FindObjectOfType<AudioManager>().Play("CoinSFX"); // Play sound
             //add score destroy coin
             Score.coins += 1;
             Destroy(this.gameObject);
+            
         }
     }
 }

@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     {
         //left and right
         var movement = Input.GetAxis("Horizontal");
-	    animator.SetFloat("Speed", Mathf.Abs(movement));
+        animator.SetFloat("Speed", Mathf.Abs(movement));
         // If the input is moving the player right and the player is facing left...
         if (movement > 0 && !m_FacingRight)
         {
@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
         //checks to see, firstly, if player is pressing jump button, AND that the player isn't already moving thru the air.
         if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.0001)
         {
+            FindObjectOfType<AudioManager>().Play("Jump"); // Play sound
             rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
 	        animator.SetBool("isJumping", true);
 
