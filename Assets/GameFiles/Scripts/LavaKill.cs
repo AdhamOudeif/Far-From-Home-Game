@@ -18,11 +18,12 @@ public class LavaKill : MonoBehaviour
     }
      void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) {
+        if (other.CompareTag("Player"))
+        {
 
             Player_Health.playerHealth -= 1;
 
-            SceneManager.LoadScene(Respawn);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
