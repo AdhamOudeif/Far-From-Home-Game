@@ -76,4 +76,16 @@ public class Player : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    //If interacting with doubleJump Token
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("DoubleJump"))
+        {
+
+            JumpForce = 8;
+
+            
+        }
+    }
 }

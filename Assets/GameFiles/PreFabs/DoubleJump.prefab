@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1341118927210593464}
   - component: {fileID: 1341118927210593467}
   - component: {fileID: 1341118927210593466}
-  - component: {fileID: 1341118927210593469}
+  - component: {fileID: 1031573995667200247}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: DoubleJump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 284a590648cd2624cbd085c4f1627465, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.23887502, b: 0.7219537, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &1341118927210593469
+--- !u!114 &1031573995667200247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,6 +139,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1341118927210593468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1eec178dcbb9e4b9457c9af00e16df, type: 3}
+  m_Script: {fileID: 11500000, guid: 88413faef8272f04db175fe7364e0991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
