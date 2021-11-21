@@ -1,10 +1,10 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
-public class AudioManager : MonoBehaviour
+public class AudioManager2 : MonoBehaviour
 {
     public Sound[] sounds; //Audio Array to act as DB for sounds
-    public static AudioManager instance;
+    public static AudioManager2 instance;
 
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public void Play (string name)
+    public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
