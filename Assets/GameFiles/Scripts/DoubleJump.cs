@@ -17,7 +17,7 @@ public class DoubleJump : MonoBehaviour
     void Update()
     {
 
-        doubleJumpText.text = DoubleJumpTimer.ToString();
+        
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
