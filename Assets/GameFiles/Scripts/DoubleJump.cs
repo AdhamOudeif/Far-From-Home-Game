@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoubleJump : MonoBehaviour
 {
+    public static int DoubleJumpTimer =0;
+    public Text doubleJumpText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        doubleJumpText.text = DoubleJumpTimer.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        doubleJumpText.text = DoubleJumpTimer.ToString();
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

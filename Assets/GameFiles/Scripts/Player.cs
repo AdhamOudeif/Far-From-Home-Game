@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float JumpForce = 15f;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private LayerMask WhatIsGround;
-    float timer = 10;    //for Double Jump
+    float timer = 15;    //for Double Jump
     
 
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -73,10 +73,11 @@ public class Player : MonoBehaviour
              
             if (timer <= 0)
             {
-                JumpForce = 5;
+                JumpForce = 6;
                 timer = 0;
                 
             }
+            
         }
      
 
