@@ -16412,7 +16412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368565791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 190.5037, y: -6.0785, z: 0}
+  m_LocalPosition: {x: 190.54, y: -6.07, z: 0}
   m_LocalScale: {x: 0.8564607, y: 0.78242546, z: 1}
   m_Children:
   - {fileID: 2089252061}
@@ -16432,7 +16432,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004813671, y: -0.015814483}
+  m_Offset: {x: 0.004813671, y: 0.0879308}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16443,7 +16443,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4155068, y: 2.5283709}
+  m_Size: {x: 2.4155068, y: 2.3208802}
   m_EdgeRadius: 0
 --- !u!1 &373183228
 GameObject:
@@ -19029,7 +19029,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004813671, y: -0.015814483}
+  m_Offset: {x: 0.004813671, y: 0.15691617}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19040,7 +19040,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4155068, y: 2.5283709}
+  m_Size: {x: 2.4155068, y: 2.1829095}
   m_EdgeRadius: 0
 --- !u!114 &1078645158
 MonoBehaviour:
@@ -19137,7 +19137,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.31}
   serializedVersion: 2
   m_Radius: 1.28
 --- !u!1001 &1139595281
@@ -19467,7 +19467,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.22}
   serializedVersion: 2
   m_Radius: 1.28
 --- !u!61 &1211206899
@@ -19483,7 +19483,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004813671, y: -0.015814483}
+  m_Offset: {x: 0.004813671, y: 0.104907215}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19494,7 +19494,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4155068, y: 2.5283709}
+  m_Size: {x: 2.4155068, y: 2.2869272}
   m_EdgeRadius: 0
 --- !u!114 &1211206900
 MonoBehaviour:
@@ -19571,8 +19571,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211206897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125.69, y: -10.31, z: 0}
-  m_LocalScale: {x: 0.56269467, y: 0.5404995, z: 1}
+  m_LocalPosition: {x: 125.69, y: -10.303, z: 0}
+  m_LocalScale: {x: 0.56269467, y: 0.51920384, z: 1}
   m_Children:
   - {fileID: 1842134007}
   m_Father: {fileID: 0}
@@ -20585,7 +20585,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004813671, y: -0.015814483}
+  m_Offset: {x: 0.004813671, y: 0.07041633}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -20596,7 +20596,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4155068, y: 2.5283709}
+  m_Size: {x: 2.4155068, y: 2.355909}
   m_EdgeRadius: 0
 --- !u!114 &1600188311
 MonoBehaviour:
@@ -20693,7 +20693,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.09}
+  m_Offset: {x: 0, y: 0.21}
   serializedVersion: 2
   m_Radius: 1.28
 --- !u!1 &1600346710
@@ -20889,7 +20889,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004813671, y: -0.015814483}
+  m_Offset: {x: 0.004813671, y: 0.08978099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -20900,7 +20900,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4155068, y: 2.5283709}
+  m_Size: {x: 2.4155068, y: 2.3171797}
   m_EdgeRadius: 0
 --- !u!114 &1609703001
 MonoBehaviour:
@@ -20997,9 +20997,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.06}
   serializedVersion: 2
-  m_Radius: 1.28
+  m_Radius: 1.21
 --- !u!1001 &1612051427
 PrefabInstance:
   m_ObjectHideFlags: 0
