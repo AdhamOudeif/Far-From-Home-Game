@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6d66ffdcf5c3c414897e7b79c5012b59
   - enabled: 1
-    path: Assets/Scenes/Z_CleaningUp.unity
-    guid: 353f641a2a7e84a4ea71b343f2a3ceb7
+    path: Assets/Scenes/Prototype 1.unity
+    guid: 7f19c6298dc58c94b8173d5650568671
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 127a1400e56ce7c42bc81ccea348b967
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

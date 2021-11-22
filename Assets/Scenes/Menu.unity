@@ -751,6 +751,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
+      propertyPath: sounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
       objectReference: {fileID: 8300000, guid: d87d326b9af7d5d49bfb3134125a0710, type: 3}
@@ -758,6 +762,22 @@ PrefabInstance:
       propertyPath: sounds.Array.data[3].clip
       value: 
       objectReference: {fileID: 8300000, guid: 8826bd751acc17740ad854de6098cbd9, type: 3}
+    - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 64905689274204346a3709104ae85a96, type: 3}
+    - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334399988778832310, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6334399988778832311, guid: 6bd232136809b2c4b883c1195a0a3612, type: 3}
       propertyPath: m_Name
       value: AudioManager
