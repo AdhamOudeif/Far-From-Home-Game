@@ -14,7 +14,9 @@ public class Coins : MonoBehaviour
             //add score destroy coin
             Score.coins += 1;
             Destroy(this.gameObject);
+
             
         }
+
     }
 }

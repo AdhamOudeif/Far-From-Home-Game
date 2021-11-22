@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float JumpForce = 15f;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private LayerMask WhatIsGround;
+    float timer = 15;    //for Double Jump
+    
 
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -64,6 +66,21 @@ public class Player : MonoBehaviour
             animator.SetBool("isCrouching", false);
         }
 
+        //Reset Jumpforce if Double Jump is on
+        if (JumpForce == 8) 
+        {
+            timer -= Time.deltaTime;
+             
+            if (timer <= 0)
+            {
+                JumpForce = 6;
+                timer = 0;
+                
+            }
+            
+        }
+     
+
     }
 
     private void Flip()
@@ -76,4 +93,20 @@ public class Player : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
+    //If interacting with doubleJump Token
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("DoubleJump"))
+        {
+         
+            JumpForce = 8;
+             
+
+
+        }
+       
+
+    }
+
 }

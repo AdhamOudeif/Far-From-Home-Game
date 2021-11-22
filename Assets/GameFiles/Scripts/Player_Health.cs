@@ -21,6 +21,7 @@ public class Player_Health : MonoBehaviour
         if(playerHealth <= 0)
         {
             SceneManager.LoadScene("GameOver");
+            
         }
     }
    
