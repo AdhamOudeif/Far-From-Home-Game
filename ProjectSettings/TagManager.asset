@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - DoubleJump
+  - Trap
+  - Enemy
   layers:
   - Default
   - TransparentFX

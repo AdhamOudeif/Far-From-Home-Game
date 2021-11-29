@@ -7,6 +7,7 @@ public class DoubleJump : MonoBehaviour
 {
     public static float DoubleJumpTimer = 15;
     public Text doubleJumpText;
+    public GameObject activeJump;
     public SpriteRenderer spriteRenderer;
     public bool startTimer = false;
     // Start is called before the first frame update
@@ -28,6 +29,7 @@ public class DoubleJump : MonoBehaviour
         if (DoubleJumpTimer < 0)
         {
             doubleJumpText.gameObject.SetActive(false);
+            activeJump.gameObject.SetActive(false);
         }
 
 
@@ -38,6 +40,7 @@ public class DoubleJump : MonoBehaviour
         //If player collieds with coin
         if (collision.gameObject.tag == "Player")
         {
+            activeJump.gameObject.SetActive(true);
             startTimer = true;
             FindObjectOfType<AudioManager>().Play("PowerUP"); // Play sound
             //add score destroy coin

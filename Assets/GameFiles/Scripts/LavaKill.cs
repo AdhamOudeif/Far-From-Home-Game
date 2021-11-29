@@ -24,7 +24,7 @@ public class LavaKill : MonoBehaviour
             Player_Health.playerHealth -= 1;
             FindObjectOfType<AudioManager>().Play("Death"); // Play sound
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         }
     }
 }
