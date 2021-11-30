@@ -17,10 +17,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     public Animator animator;
 
+    private Vector3 respawnPoint;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        respawnPoint = transform.position;
     }
 
     void Update()
@@ -105,8 +106,25 @@ public class Player : MonoBehaviour
 
 
         }
-       
+        if (other.gameObject.tag == "Trap")
+        {
+            transform.position = respawnPoint;
+        }
+        if(other.gameObject.tag =="Enemy")
+        {
+            transform.position = respawnPoint;
+        }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag =="Enemy")
+        {
+            transform.position = respawnPoint;
+        }
+        
+    }
+
 
 }
