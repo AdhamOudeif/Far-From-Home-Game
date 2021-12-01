@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
 
 
         }
-        if (other.gameObject.tag == "Trap")
+        if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")
         {
             transform.position = respawnPoint;
         }

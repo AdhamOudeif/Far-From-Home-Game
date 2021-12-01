@@ -17,12 +17,13 @@ public class Score : MonoBehaviour
     {
         //convert int to text for display
         coinScore.text = coins.ToString();
-        timeText.text = time.ToString();
+      //  timeText.text = time.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         coinScore.text = coins.ToString();
         time -= 1 * Time.deltaTime;
         timeText.text = time.ToString();
@@ -30,5 +31,7 @@ public class Score : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+        
     }
+        
 }
