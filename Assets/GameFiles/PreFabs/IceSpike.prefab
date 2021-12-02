@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2379117223780538512}
   - component: {fileID: 5580949410561867713}
-  - component: {fileID: 2627540320007252572}
-  - component: {fileID: 755147031801009177}
+  - component: {fileID: -7344817953107606185}
+  - component: {fileID: 1155058965502466265}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: IceSpike
   m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 7
   m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.616545, g: 0.70425034, b: 0.8018868, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &2627540320007252572
+--- !u!61 &-7344817953107606185
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &755147031801009177
+--- !u!114 &1155058965502466265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
