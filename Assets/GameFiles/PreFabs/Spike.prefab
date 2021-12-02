@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2379117223780538512}
   - component: {fileID: 5580949410561867713}
   - component: {fileID: -7344817953107606185}
+  - component: {fileID: 1155058965502466265}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Trap
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 32622423
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 7
   m_Sprite: {fileID: 3625043607559282579, guid: 045b15ec09bba42448d89db77fa6f20a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -109,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1155058965502466265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561145676655518093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa31a941d75913c4c8f78dfe0d2e0df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Respawn: 0
