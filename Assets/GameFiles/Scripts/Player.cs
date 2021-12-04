@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
 
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private bool m_Grounded;            // Whether or not the player is grounded.
+    private bool hasPickaxe = false;
     //public CharacterController2D controller;
     private Rigidbody2D rb;
     public Animator animator;
@@ -104,6 +105,10 @@ public class Player : MonoBehaviour
         if (other.CompareTag("DoubleJump"))
         {
             JumpForce = 8;
+        }
+        if (other.CompareTag("Pickaxe"))
+        {
+            hasPickaxe = true;
         }
         //player collides w/ enemy or trap
         if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")

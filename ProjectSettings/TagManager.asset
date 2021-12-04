@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Platform
   - Portal
+  - Pickaxe
   layers:
   - Default
   - TransparentFX
