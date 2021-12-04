@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -8,11 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float JumpForce = 15f;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private LayerMask WhatIsGround;
+    [SerializeField] private GameObject pickaxeSwing;
     float timer = 15;    //for Double Jump
     
 
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private bool m_Grounded;            // Whether or not the player is grounded.
+    private bool hasPickaxe = false;
     //public CharacterController2D controller;
     private Rigidbody2D rb;
     public Animator animator;
@@ -66,6 +70,28 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isCrouching", false);
         }
+        //swing pickaxe
+        if(Input.GetKeyDown(KeyCode.Q) && hasPickaxe)
+        {
+            //putting these here so unity doesn't throw a fit
+            if (pickaxeSwing != null)
+            {
+                //grabbing mouse pos
+                Vector3 mousePosition = Input.mousePosition;
+                mousePosition = UnityEngine.Camera.main.ScreenToWorldPoint(mousePosition);
+
+                //grabbing direction that swing should face
+                Vector3 direction = new Vector3(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+                //creating swing sprite
+                var swing = Instantiate(pickaxeSwing, transform.position + (transform.forward * 2), transform.rotation);
+                swing.transform.up = direction;
+                swing.transform.Translate(0, 0.75f, 0);
+                //destroying it after 1 sec
+                Destroy(swing, 0.15f);
+            }
+            //Destroy(swing, 1);
+        }
 
         //Reset Jumpforce if Double Jump is on
         if (JumpForce == 8) 
@@ -98,18 +124,21 @@ public class Player : MonoBehaviour
     //If interacting with doubleJump Token
     void OnTriggerEnter2D(Collider2D other)
     {
+        //player collides w/ doublejump
         if (other.CompareTag("DoubleJump"))
         {
-         
             JumpForce = 8;
-             
-
-
         }
+        if (other.CompareTag("Pickaxe"))
+        {
+            hasPickaxe = true;
+        }
+        //player collides w/ enemy or trap
         if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")
         {
             transform.position = respawnPoint;
         }
+        //redundant code?
         if(other.gameObject.tag =="Enemy")
         {
             transform.position = respawnPoint;

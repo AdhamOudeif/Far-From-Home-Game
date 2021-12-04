@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
     public float time = 300;
     //coin text
     public Text coinScore;
-    public Text timeText;
+    //public Text timeText; TODO: Fix this
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class Score : MonoBehaviour
         
         coinScore.text = coins.ToString();
         time -= 1 * Time.deltaTime;
-        timeText.text = time.ToString();
+        //timeText.text = time.ToString();
         if(time<=0)
         {
             SceneManager.LoadScene("GameOver");

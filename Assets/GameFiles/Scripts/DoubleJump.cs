@@ -37,19 +37,16 @@ public class DoubleJump : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //If player collieds with coin
+        //If player collides with coin
         if (collision.gameObject.tag == "Player")
         {
             activeJump.gameObject.SetActive(true);
             startTimer = true;
             FindObjectOfType<AudioManager>().Play("PowerUP"); // Play sound
             //add score destroy coin
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
             doubleJumpText.gameObject.SetActive(true);
-            this.spriteRenderer.enabled = false;
-          
-
-
+            //this.spriteRenderer.enabled = false;
         }
 
     }
