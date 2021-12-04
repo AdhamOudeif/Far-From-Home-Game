@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
@@ -98,18 +100,17 @@ public class Player : MonoBehaviour
     //If interacting with doubleJump Token
     void OnTriggerEnter2D(Collider2D other)
     {
+        //player collides w/ doublejump
         if (other.CompareTag("DoubleJump"))
         {
-         
             JumpForce = 8;
-             
-
-
         }
+        //player collides w/ enemy or trap
         if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")
         {
             transform.position = respawnPoint;
         }
+        //redundant code?
         if(other.gameObject.tag =="Enemy")
         {
             transform.position = respawnPoint;
