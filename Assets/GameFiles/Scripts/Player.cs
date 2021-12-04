@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float JumpForce = 15f;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private LayerMask WhatIsGround;
+    [SerializeField] private GameObject pickaxeSwing;
     float timer = 15;    //for Double Jump
     
 
@@ -68,6 +69,27 @@ public class Player : MonoBehaviour
         else if (Input.GetButtonUp("Crouch"))
         {
             animator.SetBool("isCrouching", false);
+        }
+        //swing pickaxe
+        if(Input.GetKeyDown(KeyCode.Q) && hasPickaxe)
+        {
+            //putting these here so unity doesn't throw a fit
+            if (pickaxeSwing != null)
+            {
+                //grabbing mouse pos
+                Vector3 mousePosition = Input.mousePosition;
+                mousePosition = UnityEngine.Camera.main.ScreenToWorldPoint(mousePosition);
+
+                //grabbing direction that swing should face
+                Vector3 direction = new Vector3(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
+
+                var swing = Instantiate(pickaxeSwing, transform.position + (transform.forward * 2), transform.rotation);
+                swing.transform.up = direction;
+                swing.transform.Translate(0, 1, 0);
+                Debug.Log("Pickaxe");
+                Destroy(swing, 1);
+            }
+            //Destroy(swing, 1);
         }
 
         //Reset Jumpforce if Double Jump is on
