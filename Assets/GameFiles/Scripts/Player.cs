@@ -83,11 +83,12 @@ public class Player : MonoBehaviour
                 //grabbing direction that swing should face
                 Vector3 direction = new Vector3(mousePosition.x - transform.position.x, mousePosition.y - transform.position.y);
 
+                //creating swing sprite
                 var swing = Instantiate(pickaxeSwing, transform.position + (transform.forward * 2), transform.rotation);
                 swing.transform.up = direction;
-                swing.transform.Translate(0, 1, 0);
-                Debug.Log("Pickaxe");
-                Destroy(swing, 1);
+                swing.transform.Translate(0, 0.75f, 0);
+                //destroying it after 1 sec
+                Destroy(swing, 0.15f);
             }
             //Destroy(swing, 1);
         }
