@@ -8,7 +8,9 @@ public class Score : MonoBehaviour
 {
     //Number of coins
     public static int coins = 0;
-    public float time = 300;
+    
+    public static int coinCount = 0;
+    
     //coin text
     public Text coinScore;
     //public Text timeText; TODO: Fix this
@@ -23,15 +25,9 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+  
         coinScore.text = coins.ToString();
-        time -= 1 * Time.deltaTime;
-        //timeText.text = time.ToString();
-        if(time<=0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-        
+   
     }
         
 }

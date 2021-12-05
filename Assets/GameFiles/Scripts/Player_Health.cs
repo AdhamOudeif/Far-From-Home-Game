@@ -23,6 +23,12 @@ public class Player_Health : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             
         }
+        if(Score.coinCount >= 10)
+        {
+            playerHealth += 1;
+            Score.coinCount = 0;
+        }
     }
+    
    
 }

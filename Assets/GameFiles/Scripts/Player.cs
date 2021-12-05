@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask WhatIsGround;
     [SerializeField] private GameObject pickaxeSwing;
     float timer = 15;    //for Double Jump
-    
-
+    public GameObject jumpText;
+    public static bool jumpTimer = false;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private bool m_Grounded;            // Whether or not the player is grounded.
     private bool hasPickaxe = false;
@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        jumpText.SetActive(false);
     }
 
     void Update()
@@ -101,8 +102,10 @@ public class Player : MonoBehaviour
             if (timer <= 0)
             {
                 JumpForce = 6;
-                timer = 0;
-                
+                timer = 15;
+                jumpText.SetActive(false);
+                jumpTimer = false;
+
             }
             
         }
@@ -127,6 +130,8 @@ public class Player : MonoBehaviour
         //player collides w/ doublejump
         if (other.CompareTag("DoubleJump"))
         {
+            jumpTimer = true;
+            jumpText.SetActive(true);
             JumpForce = 8;
         }
         if (other.CompareTag("Pickaxe"))
@@ -136,24 +141,16 @@ public class Player : MonoBehaviour
         //player collides w/ enemy or trap
         if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")
         {
+           
             transform.position = respawnPoint;
+            
         }
-        //redundant code?
-        if(other.gameObject.tag =="Enemy")
-        {
-            transform.position = respawnPoint;
-        }
+       
+       
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag =="Enemy")
-        {
-            transform.position = respawnPoint;
-        }
-        
-    }
+   
 
 
 }

@@ -13,6 +13,7 @@ public class Coins : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("CoinSFX"); // Play sound
             //add score destroy coin
             Score.coins += 1;
+            Score.coinCount += 1;
             Destroy(this.gameObject);
 
             
