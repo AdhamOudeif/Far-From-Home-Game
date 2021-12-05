@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4791171362361613100}
   m_Layer: 0
   m_Name: IceSpikes
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
