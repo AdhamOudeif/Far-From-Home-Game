@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 public class AudioManager2 : MonoBehaviour
 {
     public Sound[] sounds; //Audio Array to act as DB for sounds
@@ -19,6 +20,7 @@ public class AudioManager2 : MonoBehaviour
             return;
         }
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -30,8 +32,17 @@ public class AudioManager2 : MonoBehaviour
         }
     }
 
+    void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+    {
+        if (scene.name == "Level2bbbb" || scene.name == "Menu")
+        {
+            Destroy(gameObject);
+            Debug.Log("I am inside the if statement");
+        }
+    }
 
-    public void Play(string name)
+
+        public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)

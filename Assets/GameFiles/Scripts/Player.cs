@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isCrouching", false);
         }
         //swing pickaxe
-        if(Input.GetKeyDown(KeyCode.Q) && hasPickaxe)
+        if(Input.GetButtonDown("pickaxe") && hasPickaxe)
         {
             //putting these here so unity doesn't throw a fit
             if (pickaxeSwing != null)
@@ -119,9 +119,10 @@ public class Player : MonoBehaviour
         m_FacingRight = !m_FacingRight;
 
         // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        // Vector3 theScale = transform.localScale;
+        //theScale.x *= -1;
+        //transform.localScale = theScale;
+        transform.Rotate(0f, 180f, 0f);
     }
 
     //If interacting with doubleJump Token

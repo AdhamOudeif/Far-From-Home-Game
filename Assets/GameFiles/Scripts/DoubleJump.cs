@@ -21,6 +21,7 @@ public class DoubleJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (startTimer == true)
         {
             DoubleJumpTimer -= Time.deltaTime;
@@ -40,6 +41,7 @@ public class DoubleJump : MonoBehaviour
         //If player collides with coin
         if (collision.gameObject.tag == "Player")
         {
+            DoubleJumpTimer += 15;
             activeJump.gameObject.SetActive(true);
             startTimer = true;
             FindObjectOfType<AudioManager>().Play("PowerUP"); // Play sound
