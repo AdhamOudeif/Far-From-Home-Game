@@ -33645,7 +33645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c987f0e3145a07f499e5d7d29e847505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 12
   distance: 0
   Respawn: 0
   groundDetection: {fileID: 633929406}
