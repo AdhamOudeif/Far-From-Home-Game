@@ -7,7 +7,7 @@ public class PlayAgain : MonoBehaviour
 {
     public void PlayGameAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("Menu");
     }
 
     public void QuitGame()
