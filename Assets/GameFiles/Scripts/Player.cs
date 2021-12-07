@@ -150,8 +150,9 @@ public class Player : MonoBehaviour
         }
         if(other.CompareTag("Checkpoint"))
         {
-            
+
             respawnPoint = transform.position;
+            FindObjectOfType<AudioManager>().Play("CP"); // Play sound
         }
        
        
