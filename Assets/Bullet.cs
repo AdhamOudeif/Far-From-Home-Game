@@ -23,9 +23,10 @@ public class Bullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
-        if (hitInfo.name != "Player")
-        {
-            Destroy(gameObject);
-        }
+       if (hitInfo.name != "Player")
+         {
+             Destroy(gameObject, 0);
+         }
+        
     }
 }
