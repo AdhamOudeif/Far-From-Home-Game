@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private LayerMask WhatIsGround;
     [SerializeField] private GameObject pickaxeSwing;
-    float timer = 15;    //for Double Jump
+    float timer = 0;    //for Double Jump
     public GameObject jumpText;
     public static bool jumpTimer = false;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
@@ -134,6 +134,8 @@ public class Player : MonoBehaviour
             jumpTimer = true;
             jumpText.SetActive(true);
             JumpForce = 8;
+            timer += 15;
+            Timer.jumpTime += 15;
         }
         if (other.CompareTag("Pickaxe"))
         {
@@ -145,6 +147,11 @@ public class Player : MonoBehaviour
            
             transform.position = respawnPoint;
             
+        }
+        if(other.CompareTag("Checkpoint"))
+        {
+            
+            respawnPoint = transform.position;
         }
        
        
