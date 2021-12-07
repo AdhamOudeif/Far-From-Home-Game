@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     public static float currentTime = 300f;
-    public float jumpTime = 15;
+    public static float jumpTime = 0;
     public Text jumpTimeText;
     public Text levelTimer;
     // Start is called before the first frame update

@@ -26,7 +26,7 @@ public class Player_Health : MonoBehaviour
         if(Score.coinCount >= 10)
         {
             playerHealth += 1;
-            Score.coinCount = 0;
+            Score.coinCount -= 10;
         }
     }
     
