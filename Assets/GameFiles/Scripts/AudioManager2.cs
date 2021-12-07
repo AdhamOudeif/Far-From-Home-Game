@@ -34,7 +34,7 @@ public class AudioManager2 : MonoBehaviour
 
     void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
     {
-        if (scene.name == "Level2bbbb" || scene.name == "Menu")
+        if (scene.name == "Level2c" || scene.name == "Menu" || scene.name == "GameOver" )
         {
             Destroy(gameObject);
             Debug.Log("I am inside the if statement");
