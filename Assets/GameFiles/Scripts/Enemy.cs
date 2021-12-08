@@ -9,6 +9,21 @@ public class Enemy : MonoBehaviour
 
 	public GameObject deathEffect;
 
+
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "Bullet")
+		{
+			TakeDamage(5);
+			Debug.Log("Ouch! My health is: " + health);
+		}
+		if(collision.gameObject.tag == "Player")
+        {
+			Debug.Log("Killed the player!");
+			this.health = 100;
+        }
+	}
+
 	public void TakeDamage(int damage)
 	{
 		health -= damage;

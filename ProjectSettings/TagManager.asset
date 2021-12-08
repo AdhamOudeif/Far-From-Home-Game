@@ -12,6 +12,7 @@ TagManager:
   - Portal
   - Pickaxe
   - Checkpoint
+  - Bullet
   layers:
   - Default
   - TransparentFX

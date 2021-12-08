@@ -21,10 +21,9 @@ public class DoubleJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (startTimer == true)
         {
-            DoubleJumpTimer -= Time.deltaTime;
+            //DoubleJumpTimer -= Time.deltaTime;
             doubleJumpText.text = DoubleJumpTimer.ToString("F2");
         }
         if (DoubleJumpTimer < 0)
@@ -32,9 +31,6 @@ public class DoubleJump : MonoBehaviour
             doubleJumpText.gameObject.SetActive(false);
             activeJump.gameObject.SetActive(false);
         }
-
-
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

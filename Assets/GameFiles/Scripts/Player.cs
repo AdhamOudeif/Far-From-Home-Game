@@ -109,10 +109,7 @@ public class Player : MonoBehaviour
             }
             
         }
-     
-
     }
-
     private void Flip()
     {
         // Switch the way the player is labelled as facing.
@@ -144,13 +141,10 @@ public class Player : MonoBehaviour
         //player collides w/ enemy or trap
         if (other.gameObject.tag == "Trap" || other.gameObject.tag == "Enemy")
         {
-           
             transform.position = respawnPoint;
-            
         }
         if(other.CompareTag("Checkpoint"))
         {
-
             respawnPoint = transform.position;
             FindObjectOfType<AudioManager>().Play("CP"); // Play sound
         }

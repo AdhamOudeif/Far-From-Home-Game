@@ -20,6 +20,5 @@ public class Weapon : MonoBehaviour
     {
         //shoot logic
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
     }
 }
