@@ -15,7 +15,8 @@ public class Enemy : MonoBehaviour
 		if (collision.gameObject.tag == "Bullet")
 		{
 			TakeDamage(5);
-			Debug.Log("Ouch! My health is: " + health);
+            Debug.Log("Ouch! My health is: " + health);
+			FindObjectOfType<AudioManager>().Play("Ouch"); // Play sound
 		}
 		if(collision.gameObject.tag == "Player")
         {
@@ -30,7 +31,8 @@ public class Enemy : MonoBehaviour
 
 		if (health <= 0)
 		{
-			Die();
+            Die();
+			FindObjectOfType<AudioManager>().Play("EnemyDie"); // Play sound
 		}
 	}
 
