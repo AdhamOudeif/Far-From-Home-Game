@@ -11,6 +11,9 @@ Blaine Cytalk
 
 https://adhamoudeif.itch.io/slash-ffh-v1
 
+# JIRA Board:
+https://far-from-home-game.atlassian.net/jira/software/projects/FFHG/boards/1/roadmap
+
 # contributions:
 
 Unity Asset Store:
