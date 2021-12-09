@@ -7,9 +7,9 @@ Hussein Alsowadi
 Sean Mick
 Blaine Cytalk
 
-# Prototype Link:
+# Game Link:
 
-https://adhamoudeif.itch.io/far-from-home-prototype
+https://adhamoudeif.itch.io/slash-ffh-v1
 
 # contributions:
 
